@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@builder.io/mitosis": "^0.0.96",
+    "@builder.io/mitosis-cli": "^0.0.55",
+    "@vitepress-demo-preview/component": "^2.2.0",
+    "@vitepress-demo-preview/plugin": "^1.1.9",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@algolia/client-search": "^4.17.0",
+    "@builder.io/eslint-plugin-mitosis": "^0.0.14",
+    "eslint": "^8.38.0",
+    "vitepress": "1.0.0-alpha.65",
+    "vitepress-theme-demoblock": "^2.0.2"
+  },
+  "scripts": {
+    "build": "npm exec mitosis build",
+    "docs:dev": "vitepress dev --host",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  }
+}
