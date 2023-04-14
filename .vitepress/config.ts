@@ -6,6 +6,7 @@ import {demoBlockPlugin } from 'vitepress-theme-demoblock'
 export default defineConfig({
   title: "Transformers",
   description: "mitosis",
+  base:'/transformers/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -25,7 +26,8 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+    
   },
   markdown: {
     // theme: {
