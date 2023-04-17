@@ -34,7 +34,7 @@ export default defineConfig({
       {
         text: 'Nav',
         items: [
-          { text: 'navgation', link: '/button' },
+          { text: 'navigation', link: '/navigation' },
         ]
       }
     ],
