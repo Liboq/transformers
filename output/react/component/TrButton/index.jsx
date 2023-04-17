@@ -1,20 +1,15 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function TrButton(props) {
   const [name, setName] = useState(() => "Alex");
-
-  useEffect(() => {
-    console.log(props.onLog);
-  }, []);
 
   return (
     <>
       <>
         <div className="button-container">
           <button
-            className={`button-color-${props.type}`}
-            onClick={(event) => props.onLog()}
+            className={` button-color--${props.type} button-size--${props.size}`}
           >
             {props.children}
           </button>
@@ -28,29 +23,37 @@ function TrButton(props) {
           margin-left: 20px;
         }
         button {
-          padding: 6px 16px;
           color: white;
           box-shadow: 1px 1px 5px 0px #078afe;
           border-radius: 2px;
         }
-        .button-color-primary {
+        .button-color--primary {
           background: linear-gradient(209deg, #0ebbff 0%, #0685fe 100%);
         }
-        .button-color-danger {
+        .button-color--danger {
           background: #d40000;
         }
-        .button-color-normal {
+        .button-color--normal {
           background: #ffffff;
           color: #000;
         }
-        .button-color-info {
+        .button-color--info {
           background: #ed6a0c;
+        }
+        .button-size--samll {
+          padding: 3px 8px;
+        }
+        .button-size--middle {
+          padding: 6px 16px;
+        }
+        .button-size--middle {
+          padding: 9px 24px;
         }
       `}</style>
     </>
   );
 }
 
-TrButton.defaultProps = { type: "primary", onLog: () => console.log(777) };
+TrButton.defaultProps = { type: "primary", size: "middle" };
 
 export default TrButton;

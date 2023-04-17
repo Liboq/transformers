@@ -5,20 +5,23 @@
     "@vitepress-demo-preview/component": "^2.2.0",
     "@vitepress-demo-preview/plugin": "^1.1.9",
     "prettier": "^2.8.7",
-    "typescript": "^5.0.4",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "webpack": "^5.79.0"
   },
   "devDependencies": {
     "@algolia/client-search": "^4.17.0",
     "@builder.io/eslint-plugin-mitosis": "^0.0.14",
     "eslint": "^8.38.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.65",
     "vitepress-theme-demoblock": "^2.0.2"
   },
   "scripts": {
     "build": "npm exec mitosis build",
-    "docs:dev": "vitepress dev --host",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:dev": "vitepress dev document --host",
+    "docs:build": "vitepress build document",
+    "docs:preview": "vitepress preview",
+    "prettier":"npx prettier --write"
   }
 }
