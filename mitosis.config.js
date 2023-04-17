@@ -1,6 +1,11 @@
 module.exports = {
     files: 'component/**',
     targets: ['vue3','react'],
+    options:{
+      vue:{
+        api:'composition',
+      }
+    },
     parserOptions: {
         ecmaFeatures: {
           jsx: true,
